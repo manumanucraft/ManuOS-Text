@@ -5,4 +5,6 @@ function download(url,file)
   f:write(c)
 end
 function gitDownload(user,repo,branch,path,file)
-  url = "http://raw.githubusercontent.com/"
+  url = "http://raw.githubusercontent.com/"..user.."/"..repo.."/"..branch.."/"..path.."/"
+  download(url,file)
+end
