@@ -1,0 +1,10 @@
+function download(url,file)
+  uri = http.readAll(url)
+  c = uri.readAll()
+  f = fs.open(file,"w")
+  f:write(c)
+end
+function gitDownload(user,repo,branch,path,file)
+  url = "http://raw.githubusercontent.com/"..user.."/"..repo.."/"..branch.."/"..path.."/"
+  download(url,file)
+end
