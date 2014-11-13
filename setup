@@ -8,3 +8,4 @@ function gitDownload(user,repo,branch,path,file)
   url = "http://raw.githubusercontent.com/"..user.."/"..repo.."/"..branch.."/"..path.."/"
   download(url,file)
 end
+print("Downloaded successfully")
